@@ -85,6 +85,40 @@ a:hover{
 }
 }
 
+
+@media print, screen and (max-width: 480px){
+    
+  .container{
+      flex-direction: column;
+  }
+  
+  .title{
+      padding: 0px;
+      color: #f1f875;
+      font-weight: bold;
+      font-size: 70px;
+      width: 100%;
+      height: auto;
+      text-align: center;
+  }
+  
+  .list{
+      width: 100%;
+      height: auto;
+  }
+  
+ .text{
+      margin: auto;
+
+  }
+  .footer{
+      margin: auto;
+  }
+  li{
+  padding: 0px;
+}
+}
+
 /* --------------------- POPUP --------------------- */
 
 .box {
