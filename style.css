@@ -1,0 +1,153 @@
+/* --------------------- WIDE SCREEN ---------------------*/
+
+body{
+    /*background-color: #62c0da;*/
+    font-family: 'Calisto MT';
+    margin: 0px; 
+    padding: 0px;
+}
+
+li{
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    font-style: italic;
+}
+
+.container{
+    display: flex;
+
+}
+
+.title{
+    padding-left: 2vw;
+    display: flex;
+    color: #f1f875;
+    text-shadow: 2px 2px #FF0000;
+    font-weight: bold;
+    font-size: 8vw;
+    width: 50vw;
+    height: 100vh;
+}
+.text{
+    margin: auto 0;
+}
+
+.list{
+    display: flex;
+    width: 45vw;
+    height: 100vh;
+}
+
+#info{
+    padding-top: 10px;
+    
+
+}
+   
+/* --------------------- SMALL SCREEN --------------------- */
+
+@media print, screen and (max-width: 800px){
+    
+    .container{
+        flex-direction: column;
+    }
+    
+    .title{
+        padding: 0px;
+        color: #f1f875;
+        font-weight: bold;
+        font-size: 70px;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    
+    .list{
+        width: 100%;
+        height: auto;
+    }
+    
+   .text{
+        margin: auto;
+
+    }
+    .footer{
+        margin: auto;
+    }
+    li{
+    padding: 0px;
+}
+}
+
+/* --------------------- POPUP --------------------- */
+
+.box {
+    width: 1%;
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+  }
+  
+  .button {
+    font-size: 1em;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    /*transition: all 0.3s ease-out;*/
+    color: #f1f875;
+    text-shadow: 0.5px 0.5px #FF0000;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
