@@ -2,11 +2,16 @@
 var link = "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/"
 
 var today = new Date();
+
+var utc = today.getTime() + (today.getTimezoneOffset() * 60000);
+today = new Date(utc + (3600000*-8));
+
 var dd = String(today.getDate()-1).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 var yyyy = today.getFullYear();
 
 today = yyyy + '/' + mm + '/' + dd;
+console.log(today)
 link = link + today;
 
 bgs = ['#254D32','#077187','#3D5A80','#88A2AA',

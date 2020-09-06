@@ -1,7 +1,6 @@
 /* --------------------- WIDE SCREEN ---------------------*/
 
 body{
-    /*background-color: #62c0da;*/
     font-family: 'Calisto MT';
     margin: 0px; 
     padding: 0px;
@@ -21,7 +20,6 @@ a:hover{
 
 .container{
     display: flex;
-
 }
 
 .title{
@@ -52,10 +50,11 @@ a:hover{
    
 /* --------------------- SMALL SCREEN --------------------- */
 
-@media print, screen and (max-width: 800px){
+@media print, screen and (max-width: 980px){
     
     .container{
         flex-direction: column;
+        padding-top: 35px;
     }
     
     .title{
@@ -86,39 +85,6 @@ a:hover{
 }
 
 
-@media print, screen and (max-width: 480px){
-    
-  .container{
-      flex-direction: column;
-  }
-  
-  .title{
-      padding: 0px;
-      color: #f1f875;
-      font-weight: bold;
-      font-size: 70px;
-      width: 100%;
-      height: auto;
-      text-align: center;
-  }
-  
-  .list{
-      width: 100%;
-      height: auto;
-  }
-  
- .text{
-      margin: auto;
-
-  }
-  .footer{
-      margin: auto;
-  }
-  li{
-  padding: 0px;
-}
-}
-
 /* --------------------- POPUP --------------------- */
 
 .box {
@@ -133,7 +99,6 @@ a:hover{
     border-radius: 20px/50px;
     text-decoration: none;
     cursor: pointer;
-    /*transition: all 0.3s ease-out;*/
     color: #f1f875;
     text-shadow: 0.5px 0.5px #FF0000;
   }
