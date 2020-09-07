@@ -4,7 +4,7 @@ var link = "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia
 var today = new Date();
 
 var utc = today.getTime() + (today.getTimezoneOffset() * 60000);
-today = new Date(utc + (3600000*-8));
+today = new Date(utc + (3600000*-7));
 
 var dd = String(today.getDate()-1).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
