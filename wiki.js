@@ -40,8 +40,6 @@ request.onload = function () {
         a.title = data.items[0].articles[i].article.replace(/_/g, ' ');
         a.href = 'https://en.wikipedia.org/wiki/' + data.items[0].articles[i].article
 
-        var fsize  = 20 - i + 'pt'
-
         document.getElementById('top' + (i - 1)).innerHTML = a.title;
         document.getElementById('top' + (i - 1)).href = a.href;
         document.getElementById('top' + (i - 1)).target = "_blank;";
@@ -51,8 +49,8 @@ request.onload = function () {
     var avg_views = views/10
 
     for (var i = 2; i<12; i++){
-        relative_size = data.items[0].articles[i].views/avg_views
-        fsize = relative_size * 24 + 'px'
+        var relative_size = data.items[0].articles[i].views/avg_views
+        var fsize = relative_size * 24 + 'pt'
         document.getElementById('top' + (i - 1)).style.fontSize = fsize;
     }
 
