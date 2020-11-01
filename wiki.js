@@ -4,10 +4,10 @@ var link = "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia
 var today = new Date();
 
 var utc = today.getTime() + (today.getTimezoneOffset() * 60000);
-today = new Date(utc + (3600000*-7));
+today = new Date(utc + (3600000*-31));
 
-var dd = String(today.getDate()-1).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); 
 var yyyy = today.getFullYear();
 
 today = yyyy + '/' + mm + '/' + dd;
@@ -31,7 +31,6 @@ request.onload = function () {
 
     var views = 0;
     for (var i = 2; i<12; i++){
-
         var a = document.createElement('a');
         var url = document.createTextNode(data.items[0].articles[i].article.replace(/_/g, ' '));
         views += data.items[0].articles[i].views
